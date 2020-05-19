@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <title>Characters - R&M</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.css">
+ <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class = "ui container" id="test">
+<header>
+	<img src="images/rick_and_morty_banner2.png" alt="R" class="ui fluid image">
+ </header>
+ 
+ <div class="ui seven item menu">
+
+	 <a class="item" href="index.html">Home</a>
+	 <a class="item" href="episodes.html">Episodes</a>
+	 <a class="active item" href="characters.html">Characters</a>
+	 <a class="item" href="creators.html">Creators</a>
+	 <a class="item" href="about.html">About Tippy</a>
+	 <a class="item" href="merch.html">Shop</a>
+	 <div class="ui dropdown item">
+     Media
+     <i class="dropdown icon"></i>
+     <div class="menu">
+      <a class="item" href="game.html">Memory Game</a>
+      <a class="item" href="gallery.html">Gallery</a>
+    </div>
+  </div>
+	 </div>
+	 
+<div class="ui container">
+<div class="ui center aligned sixteen wide grid">
+
+<h1>Characters</h1></div>
+	<main class="ui center aligned vertically divided grid">
+<p>There are many weird and crazy characters in Rick and Morty, Here are just a few!</p>
+
+	
+	<div id="content-placeholder"></div>
+
+	<script id="chars" type="text/x-handlebars-template" >
+	<div class="sixteen wide column">
+	<br>
+	<div class="ui five	raised special stackable link cards" id="cards">
+	{{#each this}}
+	
+	<div class="ui card">
+	    <div class="blurring dimmable image">
+      <div class="ui inverted dimmer">
+        <div class="content">
+          <div class="center">
+            {{this.name}}<br><br><div class="ui large heart rating" data-rating="5"></div>
+          </div>
+        </div>
+      </div>
+      {{{this.image}}}
+    </div>
+    <div class="content">
+      <div class="header">{{this.name}}</div>
+      <div class="meta">
+        {{this.species}}
+      </div>
+      <div class="description">
+        {{{this.description}}}
+      </div>
+    </div>
+
+	</div>
+	{{/each}}
+	</div>
+</div>
+<br>
+
+	</script>
+  <br>
+<div id="content-placeholder2"></div>
+
+	
+
+	<button class="ui blue button" data-modal-target="modal" id="open">Add a Character</button>
+<div class="ui modal" data-modal="modal">
+	
+  <i class="close icon"></i>
+  <div class="header">
+    Add a Character
+  </div><br>
+  <div class="ui form">
+    <div class="ui inline field">
+	<label id="name">Name</label>
+	<input type="text" name="name" placeholder="Name" id="name1" maxlength="12" data-tippy-content="12 Chars">
+    </div>
+    <div class="ui inline field">
+   	<label id="species">Species</label>
+	<input type="text" name="species" placeholder="Species" id="species1" maxlength="15" data-tippy-content="15 Chars">
+    </div>
+	<div class="ui inline field">
+   	<label id="description">Description	</label>
+	<input type="text" name="description" placeholder="Description" id="description1" maxlength="20" data-tippy-content="20 Chars">
+    </div>
+   <div class="ui left aligned blue button" id="post">Add Character</div>
+  
+  </div>
+  </div>
+<br>
+
+
+	</main>
+		<div class="ui center aligned grid">
+	<div class="ui row">
+	<div class="ui four wide column">
+	<img src="images/morty1.png" alt="Morty">
+	</div>
+	<div class="ui eight wide column">
+	<img src="images/bean_cutout.png" alt="Bean">
+	</div>
+	<div class="ui four wide column">
+	<img src="images/rick3.png" alt="Rick">
+	</div>
+	</div>
+<footer class="ui center aligned sixteen wide column">
+<br>
+		<button onclick="location.href='https://www.youtube.com/playlist?list=PLQl8zBB7bPvL6GycjAtAibVp6FsLWvMcY'" class="ui tiny youtube button">
+			<span><i class="youtube icon"></i>YouTube</span></button>
+	<button onclick="location.href='https://twitter.com/RickandMorty?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor'" class="ui tiny twitter button">
+		<span><i class="twitter icon"></i> Twitter</span></button>
+<br>
+<br>
+	</footer>
+</div>
+</div>
+</div>
+</div>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.min.js'></script>
+<script src = "https://cdnjs.cloudflare.com/ajax/libs/h5Validate/0.9.0/jquery.h5validate.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="https://unpkg.com/tippy.js@6"></script>
+<link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css"/>
+<link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/shift-away.css"/>
+<script src="js/form.js"></script>
+  <script>
+  $(document).ready(function() {
+  
+
+  
+  	$('[data-modal-target="modal"]').on('click', function() {
+    $('[data-modal="modal"]').modal('toggle');
+  });
+
+  $('#post').on('click', function() {
+	let descript = (
+	'<div class="ui card"><div class="image">' +
+	'<img src="images/portalchars.png"></img></div><div class="content">' +
+	'<div class="header">' + $("#name1").val() + '</div><div class="meta">' + $("#species1").val() +
+	'</div><div class="description">' + $("#description1").val() + '</div></div></div>');
+	$('#cards').append(descript);
+	$('[data-modal="modal"]').modal('toggle');
+	
+  });
+  
+tippy('input', {
+	maxWidth: 300,
+	arrow: false,
+	delay: 350,
+	animation: 'scale',
+	placement: 'right',
+	theme:'blue'
+	});
+  $('modal input').h5Validate({errorClass:'validationError' });
+  
+  const chars = 
+[{
+	"name": "Rick",
+	"species": "Human",
+	"description": "Mad scientist with alcoholic tendencies.",
+	"image": "<img src='images/rickcard.png'></img>"
+	}, {
+	"name": "Morty",
+	"species": "Human",
+	"description": "Rick's sidekick and grandson.",
+	"image": "<img src='images/mortycard.png'></img>"
+	}, {
+	"name": "Jerry",
+	"species": "Human",
+	"description": "Morty's father.<br>Fired for incompetence.",
+	"image": "<img src='images/jerrycard.png'></img>"
+	}, {
+	"name": "Beth",
+	"species": "Human",
+	"description": "Morty's mother.<br> Horse surgeon.",
+	"image": "<img src='images/bethcard.png'></img>"
+	}, {
+	"name": "Summer",
+	"species": "Human",
+	"description": "Morty's sister.",
+	"image": "<img src='images/summercard.png'></img>"
+	}, {
+	"name": "Squanchy",
+	"species": "Squanchies",
+	"description": "Cat like creature.",
+	"image": "<img src='images/squanchycard.png'></img>"
+	}, {
+	"name": "Slow-Mobius",
+	"species": "Time Lord",
+	"description": "Rick's time altering friend.",
+	"image": "<img src='images/slowmobiuscard.png'></img>"
+	}, {
+	"name": "Unity",
+	"species": "Hivemind",
+	"description": "Rick's former lover.",
+	"image": "<img src='images/unitycard.png'></img>"
+	}, {
+	"name": "Prince Nebulon",
+	"species": "Zigerion",
+	"description": "Leader of the Zigerions.",
+	"image": "<img src='images/nebuloncard.png'></img>"
+	}, {
+	"name": "Pickle Rick",
+	"species": "Pickle",
+	"description": "Rick as a pickle.",
+	"image": "<img src='images/picklerickcard.png'></img>"
+	}]
+let template = Handlebars.compile($('#chars').html());
+let output = template(chars);
+$('#content-placeholder').html(output);
+	
+$('.ui.embed').embed({
+  source      : 'youtube',
+  id          : 'EAT0nWoEzJ8',
+  placeholder : 'images/big_rick.jpg'
+});
+$('.ui.dropdown')
+  .dropdown()
+;
+  $('.rating')
+  .rating({
+	clearable: true,
+    initialRating: 0,
+    maxRating: 5
+  })
+  $('.special.cards .image').dimmer({
+  on: 'hover'
+});
+});
+</script>
+
+</body>

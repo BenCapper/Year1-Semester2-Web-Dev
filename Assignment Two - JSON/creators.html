@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <title>Creators - R&M </title>
+  <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class = "ui container" id="test">
+<header>
+	<img src="images/rick_and_morty_banner2.png" alt="R" class="ui fluid image">
+ </header>
+ 
+ <div class="ui seven item menu">
+
+	 <a class="item" href="index.html">Home</a>
+	 <a class="item" href="episodes.html">Episodes</a>
+	 <a class="item" href="characters.html">Characters</a>
+	 <a class="active item" href="creators.html">Creators</a>
+	 <a class="item" href="about.html">About Tippy</a>
+	 <a class="item" href="merch.html">Shop</a>
+	 <div class="ui dropdown item">
+     Media
+     <i class="dropdown icon"></i>
+     <div class="menu">
+      <a class="item" href="game.html">Memory Game</a>
+      <a class="item" href="gallery.html">Gallery</a>
+    </div>
+  </div>
+	 </div>
+	 
+	 <div class="ui container">
+<div class="ui center aligned sixteen wide grid">
+<h1>Dan and Justin</h1>
+</div>
+	<div class="ui center aligned vertically divided stackable grid">
+	
+	<div class="ui row">
+	<div class="ui eight wide centered column">
+	<div class="ui two raised special stackable link cards">
+  <div class="ui centered card">
+    <div class="blurring dimmable image">
+      <div class="ui inverted dimmer">
+        <div class="content">
+          <div class="center">
+            Dan Harmon<br><br><button onclick="location.href='https://www.instagram.com/danharmon/?hl=en'" class="ui tiny twitter button">
+		<span><i class="instagram icon"></i> Instagram</span></button>
+          </div>
+        </div>
+      </div>
+      <img src="images/dan.jpg" alt="Dan">
+    </div>
+Dan Harmon
+  </div>
+  <div class="ui centered card">
+    <div class="blurring dimmable image">
+      <div class="ui inverted dimmer">
+        <div class="content">
+          <div class="center">
+            Justin Roiland<br><br><button onclick="location.href='https://twitter.com/justinroiland?lang=en'" class="ui tiny twitter button">
+		<span><i class="twitter icon"></i> Twitter</span></button>
+          </div>
+        </div>
+      </div>
+      <img src="images/justin.jpg" alt="Justin">
+    </div>
+Justin Roiland
+  </div>
+	</div>
+	</div>
+	</div>
+	
+	<div class="ui row">
+	<div class="ui seven wide column">
+<p>Feel free to write a message to Dan and Justin!<br> Please leave your e-mail in case they want to reply.</p>
+
+	<div class="ui eight wide column">
+	
+	<div class="ui equal width form">
+	<form method="get" action = "process.html" class="ui form" role="form">
+  <div class="field">
+    <label>Enter message here:</label>
+    <textarea rows="3"></textarea>
+  </div>
+     <div class="required field">
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="Valid Email Address" data-h5-errorid="invalid-email" required pattern="^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$"
+		data-tippy-content="Please enter a valid email address">
+	  <div id="invalid-email" class="ui-state-error"></div>
+	</div>
+	<button class="ui blue button">
+Send Message!</button>
+</form>
+</div>
+</div>
+	</div>
+	</div>
+	<div class="ui center aligned grid">
+	<div class="ui row">
+	<div class="ui four wide column">
+	<img src="images/morty1.png" alt="Morty">
+	</div>
+	<div class="ui eight wide column">
+	<img src="images/meeseeks_cutout.png" alt="Bean">
+	</div>
+	<div class="ui four wide column">
+	<img src="images/rick3.png" alt="Rick"><br>
+	</div>
+<footer class="ui center aligned sixteen wide column"><br><br>
+<br>
+		<button onclick="location.href='https://www.youtube.com/playlist?list=PLQl8zBB7bPvL6GycjAtAibVp6FsLWvMcY'" class="ui tiny youtube button">
+			<span><i class="youtube icon"></i>YouTube</span></button>
+	<button onclick="location.href='https://twitter.com/RickandMorty?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor'" class="ui tiny twitter button">
+		<span><i class="twitter icon"></i> Twitter</span></button>
+<br>
+<br>
+	</footer>
+</div>
+</div>
+</div>
+</div>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script src = "https://cdnjs.cloudflare.com/ajax/libs/h5Validate/0.9.0/jquery.h5validate.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="https://unpkg.com/tippy.js@6"></script>
+<link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css"/>
+<link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/shift-away.css"/>
+  <script>
+$(document).ready(function() {
+  tippy('input', {
+	maxWidth: 250,
+	arrow: false,
+	delay: 350,
+	inertia: true,
+	animation: 'scale',
+	placement: 'top',
+	theme:'blue'
+	});
+$('.ui.dropdown')
+  .dropdown()
+;
+  $('.special.cards .image').dimmer({
+  on: 'hover'
+});
+  $('.form').h5Validate({errorClass:'validationError' });
+});
+
+</script>
+
+</body>
+</html>
