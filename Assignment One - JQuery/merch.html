@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <title>Shop - R&M </title>
+  <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class = "ui container" id="test">
+<header>
+	<img src="images/rick_and_morty_banner2.png" alt="R" class="ui fluid image">
+ </header>
+ 
+ <div class="ui seven item menu">
+
+	 <a class="item" href="index.html">Home</a>
+	 <a class="item" href="episodes.html">Episodes</a>
+	 <a class="item" href="characters.html">Characters</a>
+	 <a class="item" href="creators.html">Creators</a>
+	 <a class="item" href="about.html">About Tippy</a>
+	 <a class="active item" href="merch.html">Shop</a>
+	 <div class="ui dropdown item">
+     Media
+     <i class="dropdown icon"></i>
+     <div class="menu">
+      <a class="item" href="game.html">Memory Game</a>
+      <a class="item" href="gallery.html">Gallery</a>
+    </div>
+  </div>
+	 </div>
+	 
+	 <div class="ui container">
+
+<div class="ui center aligned sixteen wide grid">
+<h1>Merchandise</h1>
+</div><br><br><br>
+<div class="ui sixteen wide column">
+<div class="ui items">
+  <div class="item">
+    <div class="ui small image">
+      <img src="images/rickhat.jpg">
+    </div>
+    <div class="content">
+      <div class="header">Rick and Morty Hat</div>
+      <div class="meta">
+        <span class="price">&euro;20.00</span><br><br>
+        <button class="ui tiny button" value="20" data-name="R&M Hat" id="buy">Buy</button>
+      </div>
+      <div class="description">
+        <p></p>
+      </div>
+    </div>
+  </div>
+  <div class="item">
+    <div class="ui small image">
+      <img src="images/monopolywhite.jpg">
+    </div>
+    <div class="content">
+      <div class="header">Rick and Morty Monopoly</div>
+      <div class="meta">
+        <span class="price">&euro;25.00</span><br><br>
+        <button class="ui tiny button" value="25" data-name="R&M Monopoly" id="buy">Buy</button>
+      </div>
+      <div class="description">
+        <p></p>
+      </div>
+    </div>
+  </div>
+  <div class="item">
+    <div class="ui small image">
+      <img src="images/picklefunko.jpg">
+    </div>
+    <div class="content">
+      <div class="header">Pickle Rick Figure</div>
+      <div class="meta">
+        <span class="price">&euro;16.00</span><br><br>
+        <button class="ui tiny button" value="16" data-name="R&M Figure" id="buy">Buy</button>
+      </div>
+      <div class="description">
+        <p></p>
+      </div>
+    </div>
+  </div>
+    <div class="item">
+    <div class="ui small image">
+      <img src="images/rickshirt.jpeg">
+    </div>
+    <div class="content">
+      <div class="header">Rick and Morty Shirt</div>
+      <div class="meta">
+        <span class="price">&euro;25.00</span><br><br>
+        <button class="ui tiny button" value="25" data-name="R&M Shirt" id="buy">Buy</button>
+      </div>
+      <div class="description">
+        <p></p>
+      </div>
+    </div>
+  </div>
+  </div>
+ 
+  <div class="ui form">
+  
+  <div class="fields">
+    <div class="field">
+      <label for = "subtotal">Subtotal</label>
+      <input type="text" id="subtotal" placeholder="Subtotal">
+    </div>
+    <div class="disabled field">
+      <label>V.A.T</label>
+      <input type="text"  placeholder="21%">
+    </div>
+    <div class="field">
+      <label for = "total">Total</label>
+      <input type="text" id="total" placeholder="Total">
+    </div>
+  </div>
+</div>
+<div id="userSelection">
+<p>
+</p>
+</div>
+<form class="ui form" method="get" action="process.html" class="ui form" role="form"><br>
+  <h1>Shipping Information</h1>
+  <div class="required field">
+    <label>Name</label>
+    <div class="two fields">
+      <div class="field">
+        <input type="text" name="shipping[first-name]" data-h5-errorid="invalid-firstname" required pattern="[A-Z][a-z]+( [A-Z][a-z]+)*" 
+		data-tippy-content="Enter a name with the First Letter capitalised" placeholder="First Name">
+		<div id="invalid-firstname" class="ui-state-error"></div>
+      </div>
+      <div class="field">
+        <input type="text" name="shipping[last-name]" data-h5-errorid="invalid-lastname" required pattern="[A-Z][a-z]+( [A-Z][a-z]+)*" 
+		data-tippy-content="Enter a name with the First Letter capitalised" placeholder="Last Name">
+		<div id="invalid-lastname" class="ui-state-error"></div>
+      </div>
+    </div>
+  </div>
+  <div class="required field">
+    <label>Billing Address</label>
+    <div class="fields">
+      <div class="eight wide field">
+        <input type="text" name="shipping[address]" data-h5-errorid="invalid-address" required pattern="[a-zA-Z0-9 ]{3,40}" 
+		data-tippy-content="Enter an address (3-40 chars)" placeholder="Address Line 1">
+      </div>
+      <div class="eight wide field">
+        <input type="text" name="shipping[address-2]" data-h5-errorid="invalid-address" required pattern="[a-zA-Z0-9 ]{3,40}" 
+		data-tippy-content="Enter an address (3-40 chars)" placeholder="Address Line 2">
+      </div>
+	        <div class="eight wide field">
+        <input type="text" name="shipping[address-3]" data-h5-errorid="invalid-address" required pattern="[a-zA-Z0-9 ]{3,40}" 
+		data-tippy-content="Enter an address (3-40 chars)" placeholder="Address Line 3">
+      </div>
+	        <div class="eight wide field">
+        <input type="text" name="shipping[address-4]" data-h5-errorid="invalid-address" required pattern="[a-zA-Z0-9 ]{3,40}" 
+		data-tippy-content="Enter an address (3-40 chars)" placeholder="Address Line 4">
+		<div id="invalid-address" class="ui-state-error"></div>
+      </div>
+    </div>
+  </div>
+  <div class="one field">
+    <div class="required field">
+      <label>Country</label>
+      <div class="ui selection dropdown">
+        <input type="hidden" name="country">
+        <i class="dropdown icon"></i>
+        <div class="default text">Select Country</div>
+        <div class="menu">
+		<div class="item" data-value="au"><i class="au flag"></i>Australia</div>
+		<div class="item" data-value="gb"><i class="gb flag"></i>England</div>
+		<div class="item" data-value="ie"><i class="ie flag"></i>Ireland</div>
+		<div class="item" data-value="us"><i class="us flag"></i>United States</div>
+   
+  </div>
+       </div>
+    </div>
+  </div>
+  <h1>Billing Information</h1>
+	  <div class="required field">
+    <label>Card Type</label>
+    <div class="ui ten wide wide selection dropdown">
+      <input type="hidden" name="card[type]">
+      <div class="default text">Type</div>
+      <i class="dropdown icon"></i>
+      <div class="menu">
+        <div class="item" data-value="visa">
+          <i class="visa icon"></i>
+          Visa
+        </div>
+        <div class="item" data-value="mastercard">
+          <i class="amex icon"></i>
+          Mastercard
+        </div>
+      </div>
+    </div>
+
+  	    <div class="required field">
+      <label>Card Number</label>
+      <input type="text" name="card[number]" maxlength="16" data-h5-errorid="invalid-cardnumber"
+	data-tippy-content="Enter a valid card number"	 required pattern="[0-9]{16}" placeholder="Card Number">
+    <div id="invalid-cardnumber" class="ui-state-error"></div>
+	</div>
+  </div>
+  <div class="fields">
+
+    <div class="required three wide field">
+      <label>CVC</label>
+      <input type="text" name="card[cvc]" maxlength="3" placeholder="CVC" data-h5-errorid="invalid-cvc"
+		data-tippy-content="Enter a valid cvc" required pattern="[0-9]{3}">
+		<div id="invalid-cvc" class="ui-state-error"></div>
+    </div>
+    <div class="ui required field">
+      <label>Expiration</label>
+        <div class="field">
+          <select class="ui dropdown" name="card[expire-month]">
+            <option value="">Month</option>
+            <option value="1">January</option>
+            <option value="2">February</option>
+            <option value="3">March</option>
+            <option value="4">April</option>
+            <option value="5">May</option>
+            <option value="6">June</option>
+            <option value="7">July</option>
+            <option value="8">August</option>
+            <option value="9">September</option>
+            <option value="10">October</option>
+            <option value="11">November</option>
+            <option value="12">December</option>
+          </select>
+        </div>
+		</div>
+		<div class="ui required field">
+          <label>Year</label>
+          <select class="ui dropdown" name="card[year]">
+            <option value="">Year</option>
+            <option value="1">2020</option>
+            <option value="2">2021</option>
+            <option value="3">2022</option>
+            <option value="4">2023</option>
+          </select>
+        </div>
+        </div>
+      
+  
+  <button class="ui button" tabindex="0">Submit Order</div>
+</form>
+</div>
+
+	<div class="ui center aligned grid">
+	<div class="ui row">
+	<div class="ui four wide column">
+	<img src="images/morty1.png" alt="Morty">
+	</div>
+	<div class="ui eight wide column">
+	<img src="images/picklerick_cutout.png" alt="Bean">
+	</div>
+	<div class="ui four wide column">
+	<img src="images/rick3.png" alt="Rick"><br>
+	</div>
+<footer class="ui center aligned sixteen wide column"><br><br>
+<br>
+		<button onclick="location.href='https://www.youtube.com/playlist?list=PLQl8zBB7bPvL6GycjAtAibVp6FsLWvMcY'" class="ui tiny youtube button">
+			<span><i class="youtube icon"></i>YouTube</span></button>
+	<button onclick="location.href='https://twitter.com/RickandMorty?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor'" class="ui tiny twitter button">
+		<span><i class="twitter icon"></i> Twitter</span></button>
+<br>
+<br>
+	</footer>
+	</div>
+</div>
+</div>
+</div>
+</div>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script src = "https://cdnjs.cloudflare.com/ajax/libs/h5Validate/0.9.0/jquery.h5validate.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="https://unpkg.com/tippy.js@6"></script>
+<link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css"/>
+<link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/shift-away.css"/>
+<script src="js/form.js"></script>
+  <script>
+  $(document).ready(function() {
+$('.ui.dropdown')
+  .dropdown()
+;
+tippy('input', {
+	maxWidth: 300,
+	arrow: false,
+	delay: 350,
+	animation: 'scale',
+	placement: 'bottom',
+	theme:'blue'
+	});
+  $('.form').h5Validate({errorClass:'validationError' });
+
+  let rtotal =0;
+	$('.item .button').on('click',function(){
+	var quantity = prompt("Enter the quantity", "1");
+	let newItem = $(this).attr('data-name');
+console.log(newItem)
+	let cost = quantity * parseFloat($(this).attr('value'));
+	console.log(cost);
+	rtotal += cost;
+	console.log(rtotal);
+	$('#subtotal').val(formatCurrency(rtotal));
+	let total = (rtotal * 1.21); 
+	console.log(total)
+	$('#total').val(formatCurrency(total));
+	$('#userSelection p').append(quantity + " " + newItem  + " " + formatCurrency(($(this).attr('value') *quantity)) +'<br>');
+	});
+});
+</script>
+
+</body>

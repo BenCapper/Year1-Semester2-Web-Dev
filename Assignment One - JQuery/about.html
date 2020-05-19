@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <title>About Tippy - R&M </title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.css">
+ <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class = "ui container" id="test">
+<header>
+	<img src="images/rick_and_morty_banner2.png" alt="R" class="ui fluid image">
+ </header>
+ 
+ <div class="ui seven item menu">
+
+	 <a class="item" href="index.html">Home</a>
+	 <a class="item" href="episodes.html">Episodes</a>
+	 <a class="item" href="characters.html">Characters</a>
+	 <a class="item" href="creators.html">Creators</a>
+	 <a class="active item" href="about.html">About Tippy</a>
+	 <a class="item" href="merch.html">Shop</a>
+	 <div class="ui dropdown item">
+     Media
+     <i class="dropdown icon"></i>
+     <div class="menu">
+      <a class="item" href="game.html">Memory Game</a>
+      <a class="item" href="gallery.html">Gallery</a>
+    </div>
+  </div>
+	 </div>
+	 
+	 
+	 <div class="ui container">
+	<div class="ui center aligned grid">
+	
+	
+	<div class="ui row">
+	<div class="eight wide column">
+	<h1>Tippy</h1><br>
+	</div>
+	</div>
+	
+	
+	<div class="ui row">
+	<div class="sixteen wide left aligned column">
+	<p> <span id="about">Scripts </span><i class="chevron down icon" id="s"></i><i class="chevron up icon" id="s2"></i></p><p class="script">
+	The following scripts must be linked to the page by placing them below the JQuery scripts.
+	at the bottom of the body tag.</p><p class="script" id="white">
+	< script src="https://unpkg.com/@popperjs/core@2"></ script><br>
+	< script src="https://unpkg.com/tippy.js@6"></ script></p></div>
+	</div>
+	
+	
+	<div class="ui row">
+	<div class="sixteen wide left aligned column">
+	<p><span id="about">Stylesheets</span> <i class="chevron down icon" id="ss"></i><i class="chevron up icon" id="ss2"></i></p><p class="stylesheet">
+	To use animations that come with Tippy, the corresponding stylesheet must be included below the scripts
+	added in the last step. <br></p><p class="stylesheet" id="white">
+	< link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/shift-away.css"/><br><br>
+	<span id="white2"><i class="eye icon" id="away" data-tippy-content="Shift-Away Example"></i></span></p>
+	<p class="stylesheet"><br>
+	This imports the shift away animation. To include other animations, just copy this link and change the name of this file to
+	the name of the animation you want to add. (Replace shift-away with scale)</p>
+	<p class ="stylesheet" id="white2">
+	<i class="eye icon" id="scale" data-tippy-content="Scale Example"></i>
+	<i class="eye icon" id="toward" data-tippy-content="Shift-Towards Example"></i>
+	<i class="image icon" id="styleclick"></i><br><br>
+	<div id="images"><img src="images/stylesheets.png" id="style" class="ui centered rounded image"></img></div>
+	</p>
+	</div>
+	</div>
+	
+	
+	<div class="ui row">
+	<div class="sixteen wide left aligned column">
+	<p><span id="about"> Creation</span> <i class="chevron down icon" id="c"></i><i class="chevron up icon" id="c2"></i></p><p class="creation">
+	The next step is to include the data-tippy-content attribute in the element you want a tooltip for, (Replace Tooltip with the text you would like displayed.)</p><p class="creation" id="white2">
+	<i class="eye icon" id="toward" data-tippy-content="Replace Tooltip with the text you want to appear here!"></i>
+	<i class="image icon" id="creationclick"></i><br><br>
+	<div id="sixteen wide center aligned column"><img src="images/tippycontent.png" id="creation" class="ui centered rounded image"></img></div>
+	</p>
+	</div>
+	</div>
+	
+	
+	<div class="ui row">
+	<div class="sixteen wide left aligned column">
+	<p><span id="about"> Themes</span> <i class="chevron down icon" id="t"></i><i class="chevron up icon" id="t2"></i></p><p class="themes">
+	Custom Themes can be made in CSS.<br>Target .tippy-box[data-theme~='green'] and enter the style rules. (Replace green with the name of your theme.)</p><p class="themes" id="white2">
+	<i class="eye icon" id="theme" data-tippy-content="Black and Green Theme!"></i>
+	<i class="image icon" id="themeclick"></i><br><br>
+	<div id="images"><img src="images/themes.png" id="themes" class="ui centered rounded image"></img></div>
+	</p>
+	</div>
+	</div>
+	
+	
+	<div class="ui row">
+	<div class="sixteen wide left aligned column">
+	<p><span id="about"> JQuery </span><i class="chevron down icon" id="q"></i><i class="chevron up icon" id="q2"></i></p><p class="query">
+	The last step is to initialize Tippy and pass in the settings you want to use for customization<br>
+	There are lots of options to customize the tooltips, including:</p><br><p class="query" id="white">
+	tippy('#gallery img', {  <span id="arrow"><======></span> Inititializes the plugin.<br>
+	maxWidth: 250, <span id="arrow"> <======></span> Max width of any tooltip is 250px.<br>
+	arrow: false,  <span id="arrow"><======></span> False turns the arrow off, True turns it on.<br>
+	delay: 350,  <span id="arrow"><======></span> Tooltip has a 350ms delay before appearing.<br>
+	animation: 'scale',  <span id="arrow"><======></span> Applies the animation chosen. (Stylesheet for the chosen option must be included in your page.) <br>
+	placement: 'bottom', <span id="arrow"> <======></span> Tooltips will appear below the element.<br>
+	theme:'blue'  <span id="arrow"><======></span> Applies the theme you have chosen.<br>
+	});</p></div><br><br>
+	<br><br>
+	</div>
+</div>
+
+
+	<div class="ui center aligned grid">
+	<div class="ui row">
+	<div class="ui four wide column">
+	<img src="images/morty1.png" alt="Morty">
+	</div>
+	<div class="ui eight wide column">
+	<img src="images/squanchy_cutout.png" alt="Bean">
+	</div>
+	<div class="ui four wide column">
+	<img src="images/rick3.png" alt="Rick">
+	</div>
+	</div>
+	
+	
+<footer class="ui center aligned sixteen wide column">
+<br>
+		<button onclick="location.href='https://www.youtube.com/playlist?list=PLQl8zBB7bPvL6GycjAtAibVp6FsLWvMcY'" class="ui tiny youtube button">
+			<span><i class="youtube icon"></i>YouTube</span></button>
+	<button onclick="location.href='https://twitter.com/RickandMorty?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor'" class="ui tiny twitter button">
+		<span><i class="twitter icon"></i> Twitter</span></button>
+<br>
+<br>
+	</footer>
+	
+
+</div>
+</div>
+</div>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="https://unpkg.com/tippy.js@6"></script>
+<link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css"/>
+<link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/perspective.css"/>
+<link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/shift-away.css"/>
+<link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/shift-toward.css"/>
+  <script>
+$(document).ready(function(){
+$('.ui.dropdown')
+  .dropdown()
+;
+tippy('#scale', {
+	maxWidth: 300,
+	arrow: false,
+	delay: 350,
+	inertia: true,
+	animation: 'scale',
+	placement: 'top',
+	theme:'bigblue'
+	});
+	
+tippy('#away', {
+	maxWidth: 250,
+	arrow: false,
+	delay: 350,
+	inertia: true,
+	animation: 'shift-away',
+	placement: 'right',
+	theme:'bigblue'
+	});	
+
+tippy('#toward', {
+	maxWidth: 350,
+	arrow: false,
+	delay: 350,
+	inertia: true,
+	animation: 'shift-toward',
+	placement: 'top',
+	theme:'bigblue'
+	});
+	
+tippy('#theme', {
+	maxWidth: 250,
+	arrow: false,
+	delay: 350,
+	inertia: true,
+	animation: 'shift-toward',
+	placement: 'left',
+	theme:'green'
+	});
+	
+$('#style').hide();
+$('#styleclick').on('click',function(){
+$('#style').stop().fadeToggle(2000);
+});
+
+$('#creation').hide();
+$('#creationclick').on('click',function(){
+$('#creation').stop().fadeToggle(2000);
+});
+
+$('#themes').hide();
+$('#themeclick').on('click',function(){
+$('#themes').stop().fadeToggle(2000);
+});
+	
+$('.script').hide();
+$('#s2').hide();
+$('#s').on('click',function(){
+$('.script').toggle();
+$('#s').hide();
+$('#s2').show();
+});
+$('#s2').on('click',function(){
+$('.script').toggle();
+$('#s2').hide();
+$('#s').show();
+});
+
+$('.stylesheet').hide();
+$('#ss2').hide();
+$('#ss').on('click',function(){
+$('.stylesheet').toggle();
+$('#ss').hide();
+$('#ss2').show();
+});
+$('#ss2').on('click',function(){
+$('.stylesheet').toggle();
+$('#ss2').hide();
+$('#ss').show();
+$('#style').hide();
+});
+
+
+$('.creation').hide();
+$('#c2').hide();
+$('#c').on('click',function(){
+$('.creation').toggle();
+$('#c').hide();
+$('#c2').show();
+});
+$('#c2').on('click',function(){
+$('.creation').toggle();
+$('#c2').hide();
+$('#c').show();
+$('#creation').hide();
+});
+
+
+$('.themes').hide();
+$('#t2').hide();
+$('#t').on('click',function(){
+$('.themes').toggle();
+$('#t').hide();
+$('#t2').show();
+});
+$('#t2').on('click',function(){
+$('.themes').toggle();
+$('#t2').hide();
+$('#t').show();
+$('#themes').hide();
+});
+
+
+$('.query').hide();
+$('#q2').hide();
+$('#q').on('click',function(){
+$('.query').toggle();
+$('#q').hide();
+$('#q2').show();
+});
+$('#q2').on('click',function(){
+$('.query').toggle();
+$('#q2').hide();
+$('#q').show();
+});
+
+});
+</script>
+
+</body>
+</html>
